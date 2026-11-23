@@ -1,0 +1,5 @@
+requests>=2.32
+certifi>=2024.2
+tomli>=2.0 ; python_version < "3.11"
+# Optional: only needed if you set a Claude key as a backup writer.
+# anthropic>=0.39

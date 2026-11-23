@@ -1,0 +1,9 @@
+config.toml
+logs/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+notes.json
+profile.json

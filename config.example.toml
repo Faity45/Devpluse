@@ -1,0 +1,28 @@
+# DevPulse configuration.
+# Copy this file to config.toml (or run:  python -m devpulse init) and fill it in.
+# config.toml is git-ignored. Never commit a real key.
+#
+# The only key you need is a free Gemini key. Without it, DevPulse still runs and
+# prints a plain list of the top stories and trending repositories.
+# A key can also come from an environment variable (GEMINI_API_KEY).
+
+[dev]
+stories = 10          # how many Hacker News stories to pull
+github = true         # also show what is trending on GitHub
+repos = 6             # how many trending repositories to pull
+repo_window_days = 14 # "trending" means created within this many days
+
+[assistant]
+# Settings for the everyday skills (ask, weather, notes).
+units = "metric"        # "metric" (Celsius, km/h) or "imperial" (Fahrenheit, mph)
+use_reference = true    # for "ask", look up a quick reference before answering
+
+[keys]
+gemini_api_key = ""      # free, at https://aistudio.google.com/apikey
+anthropic_api_key = ""   # optional backup writer, https://console.anthropic.com
+
+[think]
+provider = "gemini"
+gemini_model = "gemini-3.5-flash-lite"
+gemini_backup_models = ["gemini-3.5-flash", "gemini-3.6-flash"]
+claude_model = "claude-opus-5-5"
